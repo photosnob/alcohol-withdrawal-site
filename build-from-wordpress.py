@@ -31,6 +31,9 @@ def clean(path, t, search_page=False):
                 or '_wpemojiSettings' in body or 'email-decode.min.js' in src or 'comment-reply' in src or 'wp-embed' in src):
             sc.decompose()
     for e in s.select('[class^="mailmunch-"], [class*=" mailmunch-"]'): e.decompose()
+    # Header "Speak with a treatment advisor" line (the referral program behind it has ended)
+    for e in s.select('.td-header-sp-recs'):
+        if '888-213-1552' in e.get_text(): e.decompose()
     # Comment forms (none of the posts have comments; a static site can't take new ones)
     for e in s.select('#respond, .comment-respond, .comments#comments'): e.decompose()
     # Cloudflare email obfuscation: put the real addresses back (Cloudflare re-applies it on the live domain if it's on)
