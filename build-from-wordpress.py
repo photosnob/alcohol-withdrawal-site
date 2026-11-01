@@ -34,6 +34,9 @@ def clean(path, t, search_page=False):
     # Header "Speak with a treatment advisor" line (the referral program behind it has ended)
     for e in s.select('.td-header-sp-recs'):
         if '888-213-1552' in e.get_text(): e.decompose()
+    # Footer "Speak to a treatment advisor" line (same ended referral program)
+    for e in s.select('.footer-text-wrap'):
+        for x in e.find_all(string=re.compile('Speak to a treatment advisor')): x.extract()
     # Comment forms (none of the posts have comments; a static site can't take new ones)
     for e in s.select('#respond, .comment-respond, .comments#comments'): e.decompose()
     # Cloudflare email obfuscation: put the real addresses back (Cloudflare re-applies it on the live domain if it's on)
