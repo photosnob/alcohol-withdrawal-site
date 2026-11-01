@@ -1,0 +1,28 @@
+# Leftover listing-plugin pages and the WordPress sample page (removed)
+/listing-author/   /   301
+/payment-checkout/   /   301
+/payment-fail/   /   301
+/payment-success/   /   301
+/pricing-plan/   /   301
+/sample-page/   /   301
+/submit-listing/   /   301
+
+# WordPress endpoints and feeds
+/feed/   /   301
+/comments/feed/   /   301
+/home/feed/   /   301
+/home/   /   301
+/wp-login.php   /   301
+/wp-admin/   /   301
+/xmlrpc.php   /   301
+/wp-sitemap.xml   /sitemap.xml   301
+/sitemap_index.xml   /sitemap.xml   301
+
+# Old sitemap pieces from the WordPress sitemap plugin
+/sitemap-home.xml   /sitemap.xml   301
+/sitemap-posttype-page.xml   /sitemap.xml   301
+/sitemap-posttype-post.2018.xml   /sitemap.xml   301
+/sitemap-posttype-post.2019.xml   /sitemap.xml   301
+/sitemap-posttype-post.2023.xml   /sitemap.xml   301
+/sitemap-taxonomy-category.xml   /sitemap.xml   301
+/sitemap-taxonomy-post_tag.xml   /sitemap.xml   301
